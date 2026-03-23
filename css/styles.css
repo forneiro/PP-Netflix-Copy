@@ -1,0 +1,178 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --overlay: rgba(0, 0, 0, 0.7);
+  --principalColor: #df1b1b;
+  --background-arrows: rgba(29, 29, 29, 0.7);
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+  background-color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 140rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: var(--principalColor);
+  border: 1px solid var(--principalColor);
+}
+
+.btn,
+.header__nav select {
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.4rem;
+  color: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.margin-top {
+  margin-top: 6rem;
+}
+
+/* Header */
+.header {
+  background-image: url("../imgs/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header__overlay {
+  background-color: var(--overlay);
+  padding-bottom: 8rem;
+}
+
+.header__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  max-width: 10.8rem;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.header__nav .btn,
+.header__nav select {
+  height: 3.5rem;
+}
+
+.header__nav select {
+  background-color: transparent;
+}
+
+.header__info {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.header__title {
+  font-size: 3.2rem;
+}
+
+.header__form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header__form input {
+  border: 1px solid var(--principalColor);
+  border-radius: 0.6rem;
+  background-color: transparent;
+  padding: 1.7rem;
+  color: inherit;
+}
+
+.header__form button {
+  align-self: center;
+  font-size: 1.8rem;
+  padding: 1.2rem 1.8rem;
+}
+
+/* Tendencias */
+.trend__container {
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.trend__article {
+  position: relative;
+}
+
+.trend__img {
+  min-width: 10rem;
+  padding: 0.4rem;
+  border-radius: 1rem;
+}
+
+.trend__num {
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+
+  font-size: 6rem;
+}
+
+.trend__arrow {
+  position: absolute;
+  font-size: 4rem;
+  background-color: var(--background-arrows);
+  border: none;
+  color: inherit;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.trend__arrow--left {
+}
+
+.trend__arrow--right {
+  right: -5%;
+  z-index: 100;
+}

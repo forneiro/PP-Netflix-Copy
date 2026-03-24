@@ -1,6 +1,10 @@
 :root {
   --white: #fff;
   --black: #000;
+  --gradiant-1: #192145;
+  --gradiant-2: #210f18;
+  --question: #2e2e2e;
+  --benefits-paragraph: #b3b3b3;
   --overlay: rgba(0, 0, 0, 0.7);
   --principalColor: #df1b1b;
   --background-arrows: rgba(29, 29, 29, 0.7);
@@ -138,9 +142,9 @@ ul {
   display: flex;
   gap: 1rem;
   overflow: hidden;
-  position: relative;
 }
 
+.trend__carrousel,
 .trend__article {
   position: relative;
 }
@@ -153,7 +157,7 @@ ul {
 
 .trend__num {
   position: absolute;
-  left: 0;
+  left: -10%;
   bottom: 10%;
 
   font-size: 6rem;
@@ -161,12 +165,15 @@ ul {
 
 .trend__arrow {
   position: absolute;
-  font-size: 4rem;
+  font-size: 3rem;
   background-color: var(--background-arrows);
   border: none;
   color: inherit;
   top: 50%;
   transform: translateY(-50%);
+  height: 60%;
+  border-radius: 0.4rem;
+  cursor: pointer;
 }
 
 .trend__arrow--left {
@@ -175,4 +182,63 @@ ul {
 .trend__arrow--right {
   right: -5%;
   z-index: 100;
+}
+
+/* Benefits */
+.benefits__container {
+  display: grid;
+  gap: 1rem;
+}
+
+.benefits__benefit {
+  background-image: linear-gradient(
+    120deg,
+    var(--gradiant-1),
+    var(--gradiant-2)
+  );
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits__benefit svg {
+  align-self: flex-end;
+}
+
+.benefits__title {
+  font-size: 2.4rem;
+  margin: 2rem 0 0 0;
+}
+.benefits__info {
+  color: var(--benefits-paragraph);
+}
+
+/* Questions */
+.questions .btn {
+  align-self: flex-start;
+}
+
+.questions__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.questions__item {
+  background-color: var(--question);
+}
+
+.question {
+  padding: 2.4rem;
+}
+
+.question__title {
+  font-size: 1.8rem;
+  list-style: none;
+}
+
+.question__title::after {
+  content: " +";
 }

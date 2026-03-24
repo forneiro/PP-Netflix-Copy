@@ -1,13 +1,16 @@
 :root {
   --white: #fff;
   --black: #000;
+  --overlay: rgba(0, 0, 0, 0.7);
   --gradiant-1: #192145;
   --gradiant-2: #210f18;
   --question: #2e2e2e;
   --benefits-paragraph: #b3b3b3;
-  --overlay: rgba(0, 0, 0, 0.7);
   --principalColor: #df1b1b;
   --background-arrows: rgba(29, 29, 29, 0.7);
+  --footer: #b3b3b3;
+  --footer-copyright: #808080;
+  --footer-copyright-button: #458ef5;
 }
 
 html {
@@ -56,19 +59,19 @@ ul {
 .btn {
   background-color: var(--principalColor);
   border: 1px solid var(--principalColor);
+  color: inherit;
 }
 
 .btn,
-.header__nav select {
+.header__languages {
   border-radius: 0.4rem;
   padding: 0.8rem 1.4rem;
-  color: inherit;
   font-weight: bold;
   cursor: pointer;
 }
 
 .margin-top {
-  margin-top: 6rem;
+  margin-top: 7rem;
 }
 
 /* Header */
@@ -99,12 +102,13 @@ ul {
 }
 
 .header__nav .btn,
-.header__nav select {
+.header__languages {
   height: 3.5rem;
 }
 
-.header__nav select {
+.header__languages {
   background-color: transparent;
+  color: inherit;
 }
 
 .header__info {
@@ -120,7 +124,7 @@ ul {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 .header__form input {
@@ -241,4 +245,42 @@ ul {
 
 .question__title::after {
   content: " +";
+}
+
+/* Footer */
+
+.footer__title,
+.footer__item a,
+.footer__tag {
+  color: var(--footer);
+}
+
+.footer__title {
+  margin-bottom: 4rem;
+}
+
+.footer__list {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.footer__item a {
+  font-size: 1.4rem;
+}
+
+.footer__tag {
+  margin-top: 4rem;
+}
+
+.footer__copyright {
+  font-size: 1.3rem;
+  color: var(--footer-copyright);
+}
+
+.footer__copyright button {
+  text-decoration: underline;
+  color: var(--footer-copyright-button);
+  background-color: transparent;
+  border: none;
+  padding: 0;
 }

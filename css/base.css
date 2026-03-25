@@ -1,0 +1,120 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --overlay: rgba(0, 0, 0, 0.7);
+  --gradiant-1: #192145;
+  --gradiant-2: #210f18;
+  --question: #2e2e2e;
+  --question-hover: #424242;
+  --benefits-paragraph: #b3b3b3;
+  --principalColor: #df1b1b;
+  --principalColor-hover: #bd1818;
+  --background-arrows: rgba(29, 29, 29, 0.7);
+  --footer: #b3b3b3;
+  --footer-copyright: #808080;
+  --footer-copyright-button: #458ef5;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+option {
+  color: var(--black);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 140rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: var(--principalColor);
+  border: 1px solid var(--principalColor);
+  color: inherit;
+  transition: 0.4s ease;
+}
+.btn:hover {
+  background-color: var(--principalColor-hover);
+  border-color: var(--principalColor-hover);
+}
+
+.btn,
+.header__languages {
+  border-radius: 0.4rem;
+  padding: 0.9rem 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-comenzar {
+  padding: 1.6rem 2rem;
+}
+
+.margin-top {
+  margin-top: 7rem;
+}
+
+/* Header */
+
+@media (min-width: 960px) {
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  /* Utilities */
+  .container {
+    width: 87%;
+  }
+
+  /* Header */
+  .header__logo {
+    min-width: 14.8rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 82%;
+  }
+}
+
+@media (min-width: 1690px) {
+  .container {
+    max-width: 120rem;
+  }
+}

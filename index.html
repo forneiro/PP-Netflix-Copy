@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix Uruguay: Ve series online, ve películas online</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="icon" href="imgs/icon.svg" />
   </head>
   <body>
     <header class="header">
@@ -12,7 +14,7 @@
         <div class="container">
           <section class="header__bar">
             <div class="header__logo">
-              <img src="./imgs/logo.svg" alt="" />
+              <img src="./imgs/logo.webp" alt="" />
             </div>
             <ul class="header__nav">
               <li>
@@ -22,7 +24,7 @@
                 </select>
               </li>
               <li>
-                <button class="btn">Iniciar sesión</button>
+                <button class="btn" id="login">Iniciar sesión</button>
               </li>
             </ul>
           </section>
@@ -40,7 +42,7 @@
             </p>
             <form class="header__form">
               <input type="email" placeholder="Email" />
-              <button class="btn">Comenzar ></button>
+              <button class="btn btn-comenzar">Comenzar ></button>
             </form>
           </section>
         </div>
@@ -58,7 +60,8 @@
                 class="trend__img"
                 src="/imgs/1-en-el-barro.webp"
                 alt="En el barro banner"
-              /><span class="trend__num">1</span>
+              />
+              <span class="trend__num">1</span>
             </article>
             <!--.Article-->
             <article class="trend__article">
@@ -270,10 +273,11 @@
           </article>
           <!--.Article-->
           <article class="benefits__benefit">
-            <h3 class="benefits__title">Disfruta en tu TV</h3>
+            <h3 class="benefits__title">
+              Descarga tus series para verlas offline
+            </h3>
             <p class="benefits__info">
-              Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV,
-              reproductores de Blu-ray y más.
+              Guarda tu contenido favorito y siempre tendrás algo para ver.
             </p>
             <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
               <g id="download-core-small">
@@ -416,10 +420,9 @@
           </article>
           <!--.Article-->
           <article class="benefits__benefit">
-            <h3 class="benefits__title">Disfruta en tu TV</h3>
+            <h3 class="benefits__title">Disfruta donde quieras</h3>
             <p class="benefits__info">
-              Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV,
-              reproductores de Blu-ray y más.
+              Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.
             </p>
             <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
               <g id="telescope-core-small">
@@ -590,10 +593,11 @@
           </article>
           <!--.Article-->
           <article class="benefits__benefit">
-            <h3 class="benefits__title">Disfruta en tu TV</h3>
+            <h3 class="benefits__title">Crea perfiles para niños</h3>
             <p class="benefits__info">
-              Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV,
-              reproductores de Blu-ray y más.
+              Los niños vivirán aventuras con sus personajes favoritos en un
+              espacio diseñado exclusivamente para ellos, gratis con tu
+              membresía.
             </p>
             <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
               <g id="profiles-core-small">
@@ -881,13 +885,13 @@
         </ul>
 
         <div class="margin-top">
-          <p>
+          <p class="questions__info">
             ¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o
             reiniciar tu membresía de Netflix.
           </p>
           <form class="header__form">
             <input type="email" placeholder="Email" />
-            <button class="btn">Comenzar ></button>
+            <button class="btn btn-comenzar">Comenzar ></button>
           </form>
         </div>
       </section>
@@ -895,7 +899,7 @@
 
     <footer class="footer container margin-top">
       <p class="footer__title">
-        ¿Preguntas? Llama al <span>000 405 4269</span>
+        ¿Preguntas? Llama al <a href="#" class="footer__num">000 405 4269</a>
       </p>
 
       <ul class="footer__list">
@@ -929,6 +933,10 @@
         Esta página está protegida por Google reCAPTCHA para comprobar que no
         eres un robot. <button>Más info.</button>
       </p>
+
+      <button class="btn margin-top">Comienza ya</button>
     </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>

@@ -1,0 +1,18 @@
+body {
+  background-image: linear-gradient(
+    to top,
+    var(--black) 70%,
+    var(--principalColor)
+  );
+}
+
+/* Utilities */
+hr {
+  height: 1px;
+  color: var(--question);
+}
+
+/* Header */
+.header-login {
+  border-bottom: 1px solid var(--footer-copyright);
+}

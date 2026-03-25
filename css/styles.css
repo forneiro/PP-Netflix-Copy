@@ -1,77 +1,5 @@
-:root {
-  --white: #fff;
-  --black: #000;
-  --overlay: rgba(0, 0, 0, 0.7);
-  --gradiant-1: #192145;
-  --gradiant-2: #210f18;
-  --question: #2e2e2e;
-  --benefits-paragraph: #b3b3b3;
-  --principalColor: #df1b1b;
-  --background-arrows: rgba(29, 29, 29, 0.7);
-  --footer: #b3b3b3;
-  --footer-copyright: #808080;
-  --footer-copyright-button: #458ef5;
-}
-
-html {
-  font-size: 62.5%; /* 1rem = 10px */
-  box-sizing: border-box;
-}
-
-* {
-  box-sizing: inherit;
-}
-
 body {
-  margin: 0;
-  padding: 0;
-  color: var(--white);
   background-color: var(--black);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
-img {
-  max-width: 100%;
-}
-
-p {
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-/* Utilities */
-.container {
-  max-width: 140rem;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.btn {
-  background-color: var(--principalColor);
-  border: 1px solid var(--principalColor);
-  color: inherit;
-}
-
-.btn,
-.header__languages {
-  border-radius: 0.4rem;
-  padding: 0.8rem 1.4rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.margin-top {
-  margin-top: 7rem;
 }
 
 /* Header */
@@ -84,12 +12,14 @@ ul {
 .header__overlay {
   background-color: var(--overlay);
   padding-bottom: 8rem;
+  height: 60rem;
 }
 
 .header__bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 0;
 }
 
 .header__logo {
@@ -113,32 +43,37 @@ ul {
 
 .header__info {
   text-align: center;
-  margin-top: 6rem;
+  margin: 10rem auto 0;
 }
 
 .header__title {
   font-size: 3.2rem;
+  margin-bottom: 0;
+}
+
+.header__price {
+  margin-top: 1rem;
 }
 
 .header__form {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 1.8rem;
+  column-gap: 1rem;
+  row-gap: 1.4rem;
 }
 
 .header__form input {
-  border: 1px solid var(--principalColor);
+  border: 1px solid var(--footer-copyright);
   border-radius: 0.6rem;
   background-color: transparent;
-  padding: 1.7rem;
+  padding: 1.6rem;
   color: inherit;
 }
 
 .header__form button {
   align-self: center;
   font-size: 1.8rem;
-  padding: 1.2rem 1.8rem;
 }
 
 /* Tendencias */
@@ -209,10 +144,11 @@ ul {
 
 .benefits__benefit svg {
   align-self: flex-end;
+  margin-top: auto;
 }
 
 .benefits__title {
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin: 2rem 0 0 0;
 }
 .benefits__info {
@@ -232,26 +168,48 @@ ul {
 
 .questions__item {
   background-color: var(--question);
+  transition: 0.2s ease;
+}
+
+.questions__item:hover {
+  background-color: var(--question-hover);
 }
 
 .question {
   padding: 2.4rem;
+  cursor: pointer;
+}
+
+.question p {
+  font-size: 1.8rem;
 }
 
 .question__title {
   font-size: 1.8rem;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .question__title::after {
   content: " +";
+  margin-left: 4rem;
+  font-size: 3rem;
+}
+
+.question[open] .question__title::after {
+  content: " x";
 }
 
 /* Footer */
+.footer__num {
+  text-decoration: underline;
+}
 
 .footer__title,
 .footer__item a,
-.footer__tag {
+.footer__tag,
+.footer__num {
   color: var(--footer);
 }
 
@@ -283,4 +241,149 @@ ul {
   background-color: transparent;
   border: none;
   padding: 0;
+}
+
+.footer .btn {
+  width: 100%;
+  font-size: 1.7rem;
+  margin-bottom: 2.4rem;
+}
+
+@media (min-width: 600px) {
+  .header__form {
+    flex-direction: row;
+  }
+
+  .header__form input {
+    min-width: 25.4rem;
+  }
+
+  /* Questions */
+  .footer__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .questions .header__form input {
+    flex-basis: 70%;
+  }
+
+  .questions .header__form button {
+    flex-basis: 30%;
+  }
+
+  .questions__info {
+    text-align: center;
+  }
+}
+
+@media (min-width: 960px) {
+  .header__info {
+    margin-top: 10rem;
+    max-width: 60rem;
+  }
+
+  .header__title {
+    font-size: 4rem;
+  }
+
+  .header__overlay {
+    height: 70rem;
+  }
+
+  .header__form input {
+    min-width: 34rem;
+  }
+
+  /* Trend */
+  .trend__article div {
+    min-height: 19rem;
+    object-fit: cover;
+  }
+
+  /* Benefits */
+  .benefits__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Questions */
+  .footer__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .question p {
+    font-size: 2.4rem;
+  }
+
+  .question__title {
+    font-size: 2.4rem;
+  }
+
+  .questions .header__form {
+    margin: 0 auto;
+    max-width: 64rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Header */
+  .header__form input {
+    min-width: 38rem;
+  }
+
+  .header__form button {
+    font-size: 2.4rem;
+  }
+
+  .header__overlay {
+    height: 80rem;
+  }
+
+  .header__title {
+    font-size: 5.6rem;
+  }
+
+  .header__price {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  /* Benefits */
+  .benefits__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .benefits__title {
+    font-size: 2.4rem;
+  }
+
+  .benefits__info {
+    margin-bottom: 8rem;
+  }
+
+  /* Questions */
+
+  .questions .header__form {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+
+  /* Footer */
+  .footer__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1690px) {
+  .header__overlay {
+    height: 100vh;
+  }
+
+  .header__info {
+    margin-top: 20rem;
+  }
+
+  .header__title {
+    font-size: 6rem;
+    font-weight: 900;
+  }
 }

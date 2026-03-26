@@ -24,6 +24,7 @@ body {
 
 .header__logo {
   max-width: 10.8rem;
+  padding: 1rem 0;
 }
 
 .header__nav {

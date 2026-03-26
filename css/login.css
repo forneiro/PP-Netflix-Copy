@@ -1,9 +1,14 @@
 body {
   background-image: linear-gradient(
     to top,
-    var(--black) 70%,
-    var(--principalColor)
+    var(--black) 20%,
+    var(--gradiant-login)
   );
+  background-repeat: no-repeat;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
 /* Utilities */
@@ -14,5 +19,57 @@ hr {
 
 /* Header */
 .header-login {
-  border-bottom: 1px solid var(--footer-copyright);
+  border-bottom: 1px solid var(--border-bottom);
+}
+
+/* Main */
+.login-main {
+  max-width: 50rem;
+  margin: 2rem auto 0;
+}
+
+.login-main__title {
+  font-size: 3.2rem;
+  margin-bottom: 0;
+}
+
+.login-main__info {
+  color: var(--paragraph);
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.login-main .header__form {
+  flex-direction: column;
+}
+
+.login-main .header__form input {
+  width: 100%;
+}
+.login-main .header__form .btn-comenzar {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1.2rem 2rem;
+}
+
+.get-help {
+  margin-top: 4rem;
+  font-size: 1.6rem;
+}
+
+.get-help a {
+  color: var(--white);
+  font-size: 1.4rem;
+}
+
+.get-help__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.4rem;
+}
+
+.login-main__footer {
+  color: var(--login-main--footer);
+  font-size: 1.3rem;
 }

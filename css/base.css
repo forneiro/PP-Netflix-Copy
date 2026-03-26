@@ -2,8 +2,10 @@
   --white: #fff;
   --black: #000;
   --overlay: rgba(0, 0, 0, 0.7);
+  --border-bottom: rgba(109, 109, 109, 0.4);
   --gradiant-1: #192145;
   --gradiant-2: #210f18;
+  --gradiant-login: #421417;
   --question: #2e2e2e;
   --question-hover: #424242;
   --benefits-paragraph: #b3b3b3;
@@ -13,6 +15,8 @@
   --footer: #b3b3b3;
   --footer-copyright: #808080;
   --footer-copyright-button: #458ef5;
+  --paragraph: #ffffffb3;
+  --login-main--footer: #ffffff80;
 }
 
 html {
@@ -82,7 +86,7 @@ ul {
 }
 
 .btn-comenzar {
-  padding: 1.6rem 2rem;
+  padding: 1.4rem 2rem;
 }
 
 .margin-top {

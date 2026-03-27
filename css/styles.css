@@ -22,11 +22,6 @@ body {
   padding: 1rem 0;
 }
 
-.header__logo {
-  max-width: 10.8rem;
-  padding: 1rem 0;
-}
-
 .header__nav {
   display: flex;
   gap: 1.6rem;
@@ -35,11 +30,6 @@ body {
 .header__nav .btn,
 .header__languages {
   height: 3.5rem;
-}
-
-.header__languages {
-  background-color: transparent;
-  color: inherit;
 }
 
 .header__info {
@@ -54,14 +44,6 @@ body {
 
 .header__price {
   margin-top: 1rem;
-}
-
-.header__form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  column-gap: 1rem;
-  row-gap: 1.4rem;
 }
 
 .header__form input {
@@ -212,15 +194,6 @@ body {
 .footer__tag,
 .footer__num {
   color: var(--footer);
-}
-
-.footer__title {
-  margin-bottom: 4rem;
-}
-
-.footer__list {
-  display: grid;
-  gap: 1.6rem;
 }
 
 .footer__item a {

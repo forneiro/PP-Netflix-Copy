@@ -24,7 +24,7 @@ hr {
 
 /* Main */
 .login-main {
-  max-width: 50rem;
+  max-width: 44rem;
   margin: 2rem auto 0;
 }
 
@@ -45,6 +45,8 @@ hr {
 
 .login-main .header__form input {
   width: 100%;
+  font-size: 1.6rem;
+  background-color: var(--input);
 }
 .login-main .header__form .btn-comenzar {
   width: 100%;
@@ -72,4 +74,20 @@ hr {
 .login-main__footer {
   color: var(--login-main--footer);
   font-size: 1.3rem;
+  margin-top: 4rem;
+}
+
+/* Footer */
+.login-footer {
+  background-color: var(--login-footer);
+  margin-top: 20rem;
+}
+
+.login-footer .container {
+  margin-top: 7.2rem;
+  margin-bottom: 7.2rem;
+}
+
+.login-footer .header__languages {
+  margin-top: 3rem;
 }

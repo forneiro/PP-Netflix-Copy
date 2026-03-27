@@ -2,6 +2,7 @@
   --white: #fff;
   --black: #000;
   --overlay: rgba(0, 0, 0, 0.7);
+  --input: rgba(0, 0, 0, 0.4);
   --border-bottom: rgba(109, 109, 109, 0.4);
   --gradiant-1: #192145;
   --gradiant-2: #210f18;
@@ -17,6 +18,7 @@
   --footer-copyright-button: #458ef5;
   --paragraph: #ffffffb3;
   --login-main--footer: #ffffff80;
+  --login-footer: #161616;
 }
 
 html {
@@ -34,6 +36,10 @@ body {
   color: var(--white);
 
   font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-transform: none;
 }
 
 h2 {
@@ -91,6 +97,33 @@ ul {
 
 .margin-top {
   margin-top: 7rem;
+}
+
+.header__logo {
+  max-width: 10.8rem;
+  padding: 1rem 0;
+}
+
+.header__languages {
+  background-color: transparent;
+  color: inherit;
+}
+
+.header__form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  column-gap: 1rem;
+  row-gap: 1.4rem;
+}
+
+.footer__list {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.footer__title {
+  margin-bottom: 4rem;
 }
 
 /* Header */

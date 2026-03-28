@@ -10,32 +10,32 @@
   <body>
     <header class="header">
       <nav class="container bar">
-        <ul class="nav">
+        <ul class="bar__nav">
           <li class="nav__item header__logo">
             <a href="#" class="nav__enlace">
               <img src="./imgs/logo.webp" alt="" />
             </a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__enlace">Inicio</a>
+            <a href="#" class="bar__enlace">Inicio</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__enlace">TV Shows</a>
+            <a href="#" class="bar__enlace">TV Shows</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__enlace">Películas</a>
+            <a href="#" class="bar__enlace">Películas</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__enlace">Novedad</a>
+            <a href="#" class="bar__enlace">Novedad</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__enlace">Mi Lista</a>
+            <a href="#" class="bar__enlace">Mi Lista</a>
           </li>
         </ul>
 
-        <ul>
+        <ul class="bar__profile">
           <li>
-            <input type="search" />
+            <input type="search" placeholder="Títulos, persona, género" />
           </li>
           <li>
             <a href="#">
@@ -44,7 +44,49 @@
           </li>
         </ul>
       </nav>
-      <section></section>
     </header>
+
+    <main class="container">
+      <section class="movies-section">
+        <h3 class="movies-section__title">Popular</h3>
+        <section class="">
+          <div class="slider">
+            <ul class="slides">
+              <li class="slide">
+                <img
+                  class="slide__img"
+                  src="./imgs/1-banner-one-piece.webp"
+                  alt=""
+                />
+              </li>
+              <li class="slide">
+                <img
+                  class="slide__img"
+                  src="./imgs/1-banner-one-piece.webp"
+                  alt=""
+                />
+              </li>
+              <li class="slide">
+                <img
+                  class="slide__img"
+                  src="./imgs/1-banner-one-piece.webp"
+                  alt=""
+                />
+              </li>
+              <li class="slide">
+                <img
+                  class="slide__img"
+                  src="./imgs/1-banner-one-piece.webp"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+          <button id="profile-btn">hola</button>
+        </section>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
   </body>
 </html>

@@ -2,12 +2,61 @@ body {
   background-color: var(--black);
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-}
-
 .bar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.bar__nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.bar__nav .header__logo {
+  margin-right: 3rem;
+}
+
+.bar__enlace {
+  color: var(--paragraph);
+  font-size: 1.8rem;
+  transition: 0.2s ease;
+}
+
+.bar__enlace:hover {
+  color: var(--login-main--footer);
+}
+
+.bar__profile input {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  padding: 1rem 2rem;
+  color: var(--white);
+}
+
+/* Main */
+
+.movies-section__title {
+  font-size: 1.8rem;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  gap: 1rem;
+  /* transform: translateX(100%); */
+}
+
+.slide__img {
+  max-width: 24rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.slide__img:hover {
+  transform: scale(1.04);
 }

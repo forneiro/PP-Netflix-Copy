@@ -60,15 +60,30 @@ body {
 }
 
 /* Tendencias */
-.trend__container {
-  display: flex;
-  gap: 1rem;
+
+.trend__carrousel {
   overflow: hidden;
 }
 
 .trend__carrousel,
 .trend__article {
   position: relative;
+}
+
+.trend__container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.trend__article {
+  flex: 0 0 calc(20% - 1rem);
+  min-width: calc(20% - 1rem);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.trend__article:hover {
+  transform: scale(1.1);
 }
 
 .trend__img {
@@ -79,7 +94,7 @@ body {
 
 .trend__num {
   position: absolute;
-  left: -10%;
+  left: -4%;
   bottom: 10%;
 
   font-size: 6rem;
@@ -99,11 +114,11 @@ body {
 }
 
 .trend__arrow--left {
+  left: 0;
 }
 
 .trend__arrow--right {
-  right: -5%;
-  z-index: 100;
+  right: 0;
 }
 
 /* Benefits */

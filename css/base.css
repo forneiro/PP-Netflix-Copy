@@ -117,6 +117,10 @@ ul {
   row-gap: 1.4rem;
 }
 
+.hide {
+  display: none;
+}
+
 .footer__list {
   display: grid;
   gap: 1.6rem;

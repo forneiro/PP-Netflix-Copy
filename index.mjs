@@ -1,15 +1,49 @@
+import { TRENDING__ITEMS, BENEFITS__ITEMS } from "./items.js";
+
+// Variables redirect to login
 const login = document.getElementById("login");
 
-const trendCarrousel = document.querySelector(".trend__carrousel");
+// Variables Carrousel
 const trendContainer = document.querySelector(".trend__container");
 const prevBtn = document.getElementById("trend-prev");
 const nextBtn = document.getElementById("trend-next");
+
+// Variables Benefits
+const benefitsContainer = document.querySelector(".benefits__container");
+
+// Generate Trending Items
+TRENDING__ITEMS.forEach((item) => {
+  let newHtml = `
+            <article class="trend__article">
+              <img
+                class="trend__img"
+                src="${item.img}"
+                alt="${item.title}"
+              />
+              <span class="trend__num">${item.id}</span>
+            </article>`;
+  trendContainer.insertAdjacentHTML("beforeend", newHtml);
+});
+
+// Generate Benefits Items
+BENEFITS__ITEMS.forEach((item) => {
+  let newHtml = `
+            <article class="benefits__benefit">
+            <h3 class="benefits__title">${item.title}</h3>
+            <p class="benefits__info">
+              ${item.description}
+            </p>
+            ${item.svg}
+          </article>`;
+  benefitsContainer.insertAdjacentHTML("beforeend", newHtml);
+});
 
 // Redirect to login page
 login.addEventListener("click", function () {
   window.location.href = "login.html";
 });
 
+// Carrousel
 let scrollAmount = 0;
 
 nextBtn.addEventListener("click", () => {

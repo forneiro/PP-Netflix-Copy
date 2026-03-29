@@ -28,7 +28,7 @@ TRENDING__ITEMS.forEach((item) => {
 // Generate Benefits Items
 BENEFITS__ITEMS.forEach((item) => {
   let newHtml = `
-            <article class="benefits__benefit">
+          <article class="benefits__benefit">
             <h3 class="benefits__title">${item.title}</h3>
             <p class="benefits__info">
               ${item.description}

@@ -42,6 +42,12 @@ body {
   font-weight: 300;
 }
 
+.users__add-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .users__plus-sign {
   display: flex;
   align-items: center;
@@ -60,6 +66,10 @@ body {
 
 .users__plus-sign:hover {
   background-color: var(--paragraph);
+}
+
+.user__title {
+  align-items: end;
 }
 
 .manage-profiles {

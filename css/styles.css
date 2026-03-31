@@ -46,14 +46,6 @@ body {
   margin-top: 1rem;
 }
 
-.header__form input {
-  border: 1px solid var(--footer-copyright);
-  border-radius: 0.6rem;
-  background-color: transparent;
-  padding: 1.6rem;
-  color: inherit;
-}
-
 .header__form button {
   align-self: center;
   font-size: 1.8rem;

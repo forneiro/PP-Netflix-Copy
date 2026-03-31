@@ -19,6 +19,7 @@
   --paragraph: #ffffffb3;
   --login-main--footer: #ffffff80;
   --login-footer: #161616;
+  --error: #aa1414;
 }
 
 html {
@@ -117,8 +118,12 @@ ul {
   row-gap: 1.4rem;
 }
 
-.hide {
-  display: none;
+.header__form input {
+  border: 1px solid var(--footer-copyright);
+  border-radius: 0.6rem;
+  background-color: transparent;
+  padding: 1.6rem;
+  color: inherit;
 }
 
 .footer__list {
@@ -130,6 +135,18 @@ ul {
   margin-bottom: 4rem;
 }
 
+.error-message {
+  color: var(--error);
+  margin: 0;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hide {
+  display: none;
+}
 /* Header */
 
 @media (min-width: 960px) {

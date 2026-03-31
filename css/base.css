@@ -51,6 +51,10 @@ img {
   max-width: 100%;
 }
 
+input:focus {
+  outline: none;
+}
+
 option {
   color: var(--black);
 }

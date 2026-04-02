@@ -688,3 +688,5 @@ export const BENEFITS__ITEMS = [
     `,
   },
 ];
+
+export const USERS = [];

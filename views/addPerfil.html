@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Perfil</title>
+    <title>Añadir Perfil</title>
     <link rel="stylesheet" href="../css/addPerfil.css" />
     <link rel="stylesheet" href="../css/base.css" />
   </head>
@@ -16,28 +16,37 @@
         </p>
         <div class="edit-user__user-info">
           <div class="edit-user__img">
-            <a href="#">
-              <img src="../imgs/1-profile.webp" alt="Img Perfil" />
+            <a href="../views/chooseImg.html">
+              <img
+                src="../imgs/1-profile.webp"
+                alt="Img Perfil"
+                id="user__img"
+              />
             </a>
           </div>
           <input
             name="name"
             placeholder="Nombre"
             class="edit-user__name"
+            id="name"
             type="text"
           />
 
           <div class="edit-user__infantil">
-            <input type="checkbox" class="edit-user__check" />
+            <input type="checkbox" class="edit-user__check" id="user__check" />
             <p>¿Infantil?</p>
           </div>
         </div>
 
         <div class="edit-user__btns">
-          <button class="edit-user__btn">Confirmar</button>
-          <button class="edit-user__btn">Cancelar</button>
+          <button class="edit-user__btn" id="confirm-edit-btn">
+            Confirmar
+          </button>
+          <button class="edit-user__btn" id="cancel-edit-btn">Cancelar</button>
         </div>
       </section>
     </main>
+
+    <script type="module" src="../js/editProfile.mjs"></script>
   </body>
 </html>

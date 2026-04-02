@@ -10,7 +10,7 @@
   <body>
     <main class="users-container">
       <h1 class="users-title">¿Quién está viendo?</h1>
-      <section class="users">
+      <section class="users" id="users">
         <article class="user">
           <div class="user__photo">
             <a href="profile.html">
@@ -19,12 +19,14 @@
           </div>
           <h3 class="user__title">Usuario 1</h3>
         </article>
-        <article class="users__add-user">
-          <button class="users__plus-sign">+</button>
+        <article class="users__add-user" id="add-profile">
+          <button class="users__plus-sign" id="add-profile__btn">+</button>
           <h3 class="user__title">Agregar Perfil</h3>
         </article>
       </section>
       <button class="manage-profiles">Administrar perfiles</button>
     </main>
+
+    <script type="module" src="../js/addProfile.mjs"></script>
   </body>
 </html>

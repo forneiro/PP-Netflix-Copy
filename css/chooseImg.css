@@ -1,0 +1,22 @@
+body {
+  background-color: var(--black);
+}
+
+.chooseImg__title {
+  font-size: 3.8rem;
+}
+
+.imgs-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.imgs-container__img {
+  cursor: pointer;
+}
+
+.imgs-container__img:hover {
+  outline: 1px solid var(--white);
+}

@@ -22,6 +22,8 @@ confirmEditBtn.addEventListener("click", () => {
 
   const USERS = JSON.parse(localStorage.getItem("users"));
 
+  if (!userName || !userImg) return;
+
   USERS.push({
     name: userName,
     icon: userImg,

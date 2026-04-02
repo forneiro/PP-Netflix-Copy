@@ -1,4 +1,4 @@
-import { TRENDING__ITEMS, BENEFITS__ITEMS } from "./items.js";
+import { TRENDING__ITEMS, BENEFITS__ITEMS } from "./items.mjs";
 
 // Variables redirect to login
 const login = document.getElementById("login");

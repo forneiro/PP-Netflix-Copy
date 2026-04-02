@@ -8,6 +8,12 @@ addProfileBtn.addEventListener("click", () => {
   window.location.href = "./addPerfil.html";
 });
 
+localStorage.setItem(
+  "users",
+  localStorage.getItem("users") ??
+    JSON.stringify([{ name: "Usuario 1", icon: "../imgs/icon-1.webp" }]),
+);
+
 const USERS__SAVES = JSON.parse(localStorage.getItem("users"));
 
 if (USERS__SAVES.length > 0) {

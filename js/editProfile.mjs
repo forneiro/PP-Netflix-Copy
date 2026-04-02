@@ -9,12 +9,6 @@ cancelEditBtn.addEventListener("click", () => {
   window.location.href = "./users.html";
 });
 
-localStorage.setItem(
-  "users",
-  localStorage.getItem("users") ??
-    JSON.stringify([{ name: "Usuario 1", icon: "../imgs/icon-1.webp" }]),
-);
-
 confirmEditBtn.addEventListener("click", () => {
   const userName = document.getElementById("name").value;
   const userImg = document.getElementById("user__img").getAttribute("src");

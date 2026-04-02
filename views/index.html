@@ -41,8 +41,10 @@
               reiniciar tu membresía de Netflix.
             </p>
             <form class="header__form">
-              <input type="email" placeholder="Email" />
-              <button class="btn btn-comenzar">Comenzar ></button>
+              <input type="email" placeholder="Email" id="email-index" />
+              <button class="btn btn-comenzar" id="comenzar-index">
+                Comenzar >
+              </button>
             </form>
           </section>
         </div>
@@ -56,10 +58,10 @@
         <div class="trend__carrousel">
           <div class="trend__container"></div>
           <button class="trend__arrow trend__arrow--left hide" id="trend-prev">
-            &#10094
+            <
           </button>
           <button class="trend__arrow trend__arrow--right" id="trend-next">
-            &#10095
+            >
           </button>
         </div>
       </section>
@@ -228,6 +230,13 @@
 
       <button class="btn margin-top">Comienza ya</button>
     </footer>
+
+    <div class="modal-overlay hide">
+      <div class="modal-content">
+        <p>Esperando más funcionalidades.</p>
+        <button class="btn" id="btn-close-modal">Ok</button>
+      </div>
+    </div>
 
     <script type="module" src="../js/index.mjs"></script>
   </body>

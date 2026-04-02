@@ -2,6 +2,10 @@ import { TRENDING__ITEMS, BENEFITS__ITEMS } from "./items.mjs";
 
 // Variables redirect to login
 const login = document.getElementById("login");
+const emailIndex = document.getElementById("email-index");
+const comenzarIndex = document.getElementById("comenzar-index");
+const modal = document.querySelector(".modal-overlay");
+const closeModal = document.getElementById("btn-close-modal");
 
 // Variables Carrousel
 const trendContainer = document.querySelector(".trend__container");
@@ -39,8 +43,17 @@ BENEFITS__ITEMS.forEach((item) => {
 });
 
 // Redirect to login page
-login.addEventListener("click", function () {
+login.addEventListener("click", () => {
   window.location.href = "login.html";
+});
+
+comenzarIndex.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.classList.remove("hide");
+});
+
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hide");
 });
 
 // Carrousel

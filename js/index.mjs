@@ -63,40 +63,48 @@ closeModal.addEventListener("click", () => {
 
 // Bottom btn
 
-const btnObserverFnc = function ([entry]) {
-  console.log(entry);
-  if (entry.isIntersecting) {
-    console.log("hola");
-    bottomBtn.style.opacity = "1";
+let headerOut = false;
+let listOut = false;
+
+const updateBtn = () => {
+  if (headerOut && !listOut) {
     bottomBtn.style.transform = "translate(-50%, 0)";
+    bottomBtn.style.opacity = 1;
   } else {
-    bottomBtn.style.opacity = "0";
-    bottomBtn.style.transform = "translate(-50%, 100%)";
+    bottomBtn.style.transform = "translate(-50%, 200%)";
+    bottomBtn.style.opacity = 0;
   }
 };
 
-const btnObserver = new IntersectionObserver(btnObserverFnc, {
-  threshold: 0.1,
-  root: null,
+const btnObserverFnc = new IntersectionObserver(
+  (entries) => {
+    console.log(entries);
+    entries.forEach((entry) => {
+      if (entry.target === header) {
+        headerOut = !entry.isIntersecting;
+      }
+
+      if (entry.target === questionsList) {
+        const rect = entry.boundingClientRect;
+        listOut = rect.bottom < window.innerHeight;
+      }
+
+      updateBtn();
+    });
+  },
+  {
+    threshold: [0, 1],
+  },
+);
+
+btnObserverFnc.observe(questionsList);
+btnObserverFnc.observe(header);
+
+window.addEventListener("scroll", () => {
+  const rect = questionsList.getBoundingClientRect();
+  listOut = rect.bottom < window.innerHeight;
+  updateBtn();
 });
-
-btnObserver.observe(questionsList);
-
-const btnObserverHeader = ([entry]) => {
-  console.log(entry);
-
-  if (!entry.isIntersecting) {
-    bottomBtn.style.opacity = "1";
-    bottomBtn.style.transform = "translate(-50%, 0)";
-  }
-};
-
-const headerObserver = new IntersectionObserver(btnObserverHeader, {
-  threshold: 0.9,
-  root: null,
-});
-
-btnObserver.observe(btnObserverHeader);
 
 // bottomBtn
 // questionsList

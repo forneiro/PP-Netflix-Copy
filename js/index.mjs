@@ -15,6 +15,11 @@ const nextBtn = document.getElementById("trend-next");
 // Variables Benefits
 const benefitsContainer = document.querySelector(".benefits__container");
 
+// Variable bottom btn
+const bottomBtn = document.getElementById("bottom-btn");
+const questionsList = document.querySelector(".questions__list");
+const header = document.querySelector(".header");
+
 // Generate Trending Items
 TRENDING__ITEMS.forEach((item) => {
   let newHtml = `
@@ -55,6 +60,47 @@ comenzarIndex.addEventListener("click", (e) => {
 closeModal.addEventListener("click", () => {
   modal.classList.add("hide");
 });
+
+// Bottom btn
+
+const btnObserverFnc = function ([entry]) {
+  console.log(entry);
+  if (entry.isIntersecting) {
+    console.log("hola");
+    bottomBtn.style.opacity = "1";
+    bottomBtn.style.transform = "translate(-50%, 0)";
+  } else {
+    bottomBtn.style.opacity = "0";
+    bottomBtn.style.transform = "translate(-50%, 100%)";
+  }
+};
+
+const btnObserver = new IntersectionObserver(btnObserverFnc, {
+  threshold: 0.1,
+  root: null,
+});
+
+btnObserver.observe(questionsList);
+
+const btnObserverHeader = ([entry]) => {
+  console.log(entry);
+
+  if (!entry.isIntersecting) {
+    bottomBtn.style.opacity = "1";
+    bottomBtn.style.transform = "translate(-50%, 0)";
+  }
+};
+
+const headerObserver = new IntersectionObserver(btnObserverHeader, {
+  threshold: 0.9,
+  root: null,
+});
+
+btnObserver.observe(btnObserverHeader);
+
+// bottomBtn
+// questionsList
+// header
 
 // Carrousel
 let scrollAmount = 0;

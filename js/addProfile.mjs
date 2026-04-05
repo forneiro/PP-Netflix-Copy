@@ -4,6 +4,9 @@ const addProfileBtn = document.getElementById("add-profile__btn");
 const addProfile = document.getElementById("add-profile");
 const users = document.getElementById("users");
 
+// Variables Manage Profile
+const btnManageProfile = document.getElementById("manage-profiles");
+
 addProfileBtn.addEventListener("click", () => {
   window.location.href = "./addPerfil.html";
 });
@@ -38,3 +41,8 @@ if (USERS__SAVES.length >= 5) {
   addProfile.classList.remove("users__add-user");
 }
 console.log(USERS__SAVES.length);
+
+// Manage Profile Site
+btnManageProfile.addEventListener("click", () => {
+  window.location.href = "manageProfiles.html";
+});

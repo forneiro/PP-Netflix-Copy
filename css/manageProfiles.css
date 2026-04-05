@@ -1,0 +1,48 @@
+body {
+  background-color: var(--black);
+}
+
+.manage-users-title {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.users-container {
+  width: 60rem;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.manage-users__user {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.manage-users__icon {
+  max-width: 10rem;
+}
+
+.manage-users__name {
+  font-size: 2.4rem;
+  flex-grow: 1;
+}
+
+.manage-users__eliminate {
+  font-size: 2rem;
+  color: var(--white);
+  background-color: transparent;
+  border: none;
+  justify-items: flex-start;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  transition: 0.3s ease;
+}
+
+.manage-users__eliminate:hover {
+  background-color: var(--white);
+  color: var(--black);
+}

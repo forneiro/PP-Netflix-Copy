@@ -2,9 +2,7 @@ const usersContainer = document.getElementById("users-container");
 
 let USERS = JSON.parse(localStorage.getItem("users")) || [];
 
-console.log(USERS);
-
-localStorage.removeItem;
+const confirmBtn = document.getElementById("confirm");
 
 const renderUser = () => {
   usersContainer.innerHTML = "";
@@ -41,3 +39,7 @@ const deleteUser = (e) => {
 };
 
 renderUser();
+
+confirmBtn.addEventListener("click", () => {
+  window.location.href = "users.html";
+});

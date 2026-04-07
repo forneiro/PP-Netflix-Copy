@@ -35,7 +35,7 @@
 
         <ul class="bar__profile">
           <li>
-            <input type="search" placeholder="Títulos, persona, género" />
+            <input name="search" type="search" placeholder="Títulos, persona, género" />
           </li>
           <li>
             <a href="#">
@@ -52,73 +52,34 @@
         <section class="netflix-row">
           <button class="handle handle-prev" id="prev-btn">&#10094</button>
           <div class="slider">
-            <ul class="slides">
-              <li class="slide">
-                <img
-                  class="slide__img"
-                  src="..//imgs/1-banner-one-piece.webp"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="slide__img"
-                  src="../imgs/1-banner-one-piece.webp"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="slide__img"
-                  src="../imgs/1-banner-one-piece.webp"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="slide__img"
-                  src="../imgs/1-banner-one-piece.webp"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="slide__img"
-                  src="../imgs/1-banner-one-piece.webp"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="slide__img"
-                  src="../imgs/1-banner-one-piece.webp"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="slide__img"
-                  src="../imgs/1-banner-one-piece.webp"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="slide__img"
-                  src="../imgs/1-banner-one-piece.webp"
-                  alt=""
-                />
-              </li>
-              <li class="slide">
-                <img
-                  class="slide__img"
-                  src="../imgs/1-banner-one-piece.webp"
-                  alt=""
-                />
-              </li>
+            <ul class="slides" id="slides-popular">
             </ul>
           </div>
           <button class="handle handle-next" id="next-btn">&#10095</button>
+        </section>
+      </section>
+
+      <section class="movies-section">
+        <h3 class="movies-section__title">Nuevo</h3>
+        <section class="netflix-row">
+          <button class="handle handle-prev" id="prev-btn-new">&#10094</button>
+          <div class="slider">
+            <ul class="slides" id="slides-new">
+            </ul>
+          </div>
+          <button class="handle handle-next" id="next-btn-new">&#10095</button>
+        </section>
+      </section>
+
+      <section class="movies-section">
+        <h3 class="movies-section__title">Más visto</h3>
+        <section class="netflix-row">
+          <button class="handle handle-prev" id="prev-btn-most-watched">&#10094</button>
+          <div class="slider">
+            <ul class="slides-vertical" id="slides-most-watched">
+            </ul>
+          </div>
+          <button class="handle handle-next" id="next-btn-most-watched">&#10095</button>
         </section>
       </section>
     </main>

@@ -2,15 +2,18 @@ body {
   background-color: var(--black);
 }
 
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
 .manage-users-title {
   text-align: center;
   font-size: 4rem;
 }
 
 .users-container {
-  width: 60rem;
-  max-width: 90%;
-  margin: 0 auto;
+  margin-bottom: 6rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;

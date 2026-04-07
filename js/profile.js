@@ -19,11 +19,32 @@ const prevBtnMostWatched = document.getElementById("prev-btn-most-watched");
 // First slider
 let scrollAmount = 0;
 
+prevBtn.style.opacity = 0;
+
+const showBtnPrev = (scrollAmount, prevBtn) => {
+  if (scrollAmount > 1) {
+    prevBtn.style.opacity = 1;
+  } else {
+    prevBtn.style.opacity = 0;
+  }
+};
+
+const showBtnNext = (scrollAmount, maxScroll, nextBtn) => {
+  if (scrollAmount >= maxScroll) {
+    nextBtn.style.opacity = 0;
+  } else {
+    nextBtn.style.opacity = 1;
+  }
+};
+
 nextBtn.addEventListener("click", () => {
   const containerWidth = document.getElementById("slides-popular").offsetWidth;
   const maxScroll = slidesContainer.scrollWidth - containerWidth;
 
   scrollAmount += containerWidth;
+
+  showBtnPrev(scrollAmount, prevBtn);
+  showBtnNext(scrollAmount, maxScroll, nextBtn);
 
   if (scrollAmount > maxScroll) scrollAmount = maxScroll;
 
@@ -32,10 +53,16 @@ nextBtn.addEventListener("click", () => {
 
 prevBtn.addEventListener("click", () => {
   const containerWidth = document.getElementById("slides-popular").offsetWidth;
+  const maxScroll = slidesContainer.scrollWidth - containerWidth;
 
   scrollAmount -= containerWidth;
 
-  if (scrollAmount < 0) scrollAmount = 0;
+  showBtnPrev(scrollAmount, prevBtn);
+  showBtnNext(scrollAmount, maxScroll, nextBtn);
+
+  if (scrollAmount < 0) {
+    scrollAmount = 0;
+  }
 
   slidesContainer.style.transform = `translateX(-${scrollAmount}px) `;
 });
@@ -71,11 +98,15 @@ for (let i = 4; i < 13; i++) {
 }
 
 let scrollAmountNew = 0;
+prevBtnNew.style.opacity = 0;
 nextBtnNew.addEventListener("click", () => {
   const containerWidth = document.getElementById("slides-new").offsetWidth;
   const maxScroll = slidesContainerNew.scrollWidth - containerWidth;
 
   scrollAmountNew += containerWidth;
+
+  showBtnPrev(scrollAmountNew, prevBtnNew);
+  showBtnNext(scrollAmountNew, maxScroll, nextBtnNew);
 
   if (scrollAmountNew > maxScroll) scrollAmountNew = maxScroll;
 
@@ -84,8 +115,12 @@ nextBtnNew.addEventListener("click", () => {
 
 prevBtnNew.addEventListener("click", () => {
   const containerWidth = document.getElementById("slides-new").offsetWidth;
+  const maxScroll = slidesContainerNew.scrollWidth - containerWidth;
 
   scrollAmountNew -= containerWidth;
+
+  showBtnPrev(scrollAmountNew, prevBtnNew);
+  showBtnNext(scrollAmountNew, maxScroll, nextBtnNew);
 
   if (scrollAmountNew < 0) scrollAmountNew = 0;
 
@@ -108,6 +143,7 @@ for (let i = 1; i < 11; i++) {
 }
 
 let scrollAmountMostWatched = 0;
+prevBtnMostWatched.style.opacity = 0;
 
 nextBtnMostWatched.addEventListener("click", () => {
   const containerWidth = document.getElementById(
@@ -116,6 +152,9 @@ nextBtnMostWatched.addEventListener("click", () => {
   const maxScroll = slidesContainerMostWatched.scrollWidth - containerWidth;
 
   scrollAmountMostWatched += containerWidth;
+
+  showBtnPrev(scrollAmountMostWatched, prevBtnMostWatched);
+  showBtnNext(scrollAmountMostWatched, maxScroll, nextBtnMostWatched);
 
   if (scrollAmountMostWatched > maxScroll) scrollAmountMostWatched = maxScroll;
 
@@ -126,8 +165,12 @@ prevBtnMostWatched.addEventListener("click", () => {
   const containerWidth = document.getElementById(
     "slides-most-watched",
   ).offsetWidth;
+  const maxScroll = slidesContainerMostWatched.scrollWidth - containerWidth;
 
   scrollAmountMostWatched -= containerWidth;
+
+  showBtnPrev(scrollAmountMostWatched, prevBtnMostWatched);
+  showBtnNext(scrollAmountMostWatched, maxScroll, nextBtnMostWatched);
 
   if (scrollAmountMostWatched < 0) scrollAmountMostWatched = 0;
 

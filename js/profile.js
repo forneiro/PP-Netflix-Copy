@@ -1,7 +1,7 @@
 // Variables slider popular
+const slidesContainer = document.getElementById("slides-popular");
 const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
-const slidesContainer = document.getElementById("slides-popular");
 
 // Variables slider new
 const slidesContainerNew = document.getElementById("slides-new");
@@ -15,30 +15,50 @@ const slidesContainerMostWatched = document.getElementById(
 const nextBtnMostWatched = document.getElementById("next-btn-most-watched");
 const prevBtnMostWatched = document.getElementById("prev-btn-most-watched");
 
-////////////////////////////////
-// First slider
-let scrollAmount = 0;
+// Variable switch profile
+const switchProfile = document.getElementById("switch-profile");
 
-prevBtn.style.opacity = 0;
-
+// Functions
 const showBtnPrev = (scrollAmount, prevBtn) => {
-  if (scrollAmount > 1) {
-    prevBtn.style.opacity = 1;
-  } else {
-    prevBtn.style.opacity = 0;
-  }
+  scrollAmount > 1 ? (prevBtn.style.opacity = 1) : (prevBtn.style.opacity = 0);
 };
 
 const showBtnNext = (scrollAmount, maxScroll, nextBtn) => {
-  if (scrollAmount >= maxScroll) {
-    nextBtn.style.opacity = 0;
-  } else {
-    nextBtn.style.opacity = 1;
-  }
+  scrollAmount >= maxScroll
+    ? (nextBtn.style.opacity = 0)
+    : (nextBtn.style.opacity = 1);
 };
 
+const generateHtml = (num1, num2, slidesContainer) => {
+  for (let i = num1; i < num2; i++) {
+    let newHtml = `
+    <li class="slide">
+      <img
+        class="slide__img"
+        src="../imgs/banner-${i}.webp"
+        alt=""
+      />
+    </li>
+    `;
+
+    slidesContainer.insertAdjacentHTML("afterbegin", newHtml);
+  }
+};
+generateHtml(1, 10, slidesContainer);
+generateHtml(4, 13, slidesContainerNew);
+
+// Switch profile
+switchProfile.addEventListener("click", () => {
+  window.location.href = "users.html";
+});
+
+////////////////////////////////
+// First slider
+let scrollAmount = 0;
+prevBtn.style.opacity = 0;
+
 nextBtn.addEventListener("click", () => {
-  const containerWidth = document.getElementById("slides-popular").offsetWidth;
+  const containerWidth = slidesContainer.offsetWidth;
   const maxScroll = slidesContainer.scrollWidth - containerWidth;
 
   scrollAmount += containerWidth;
@@ -52,7 +72,7 @@ nextBtn.addEventListener("click", () => {
 });
 
 prevBtn.addEventListener("click", () => {
-  const containerWidth = document.getElementById("slides-popular").offsetWidth;
+  const containerWidth = slidesContainer.offsetWidth;
   const maxScroll = slidesContainer.scrollWidth - containerWidth;
 
   scrollAmount -= containerWidth;
@@ -67,40 +87,13 @@ prevBtn.addEventListener("click", () => {
   slidesContainer.style.transform = `translateX(-${scrollAmount}px) `;
 });
 
-for (let i = 1; i < 10; i++) {
-  let newHtml = `
-  <li class="slide">
-    <img
-      class="slide__img"
-      src="../imgs/banner-${i}.webp"
-      alt=""
-    />
-  </li>
-  `;
-
-  slidesContainer.insertAdjacentHTML("afterbegin", newHtml);
-}
-
 ////////////////////////////////
 // Second slider
-for (let i = 4; i < 13; i++) {
-  let newHtml = `
-  <li class="slide">
-    <img
-      class="slide__img"
-      src="../imgs/banner-${i}.webp"
-      alt=""
-    />
-  </li>
-  `;
-
-  slidesContainerNew.insertAdjacentHTML("afterbegin", newHtml);
-}
-
 let scrollAmountNew = 0;
 prevBtnNew.style.opacity = 0;
+
 nextBtnNew.addEventListener("click", () => {
-  const containerWidth = document.getElementById("slides-new").offsetWidth;
+  const containerWidth = slidesContainerNew.offsetWidth;
   const maxScroll = slidesContainerNew.scrollWidth - containerWidth;
 
   scrollAmountNew += containerWidth;
@@ -114,7 +107,7 @@ nextBtnNew.addEventListener("click", () => {
 });
 
 prevBtnNew.addEventListener("click", () => {
-  const containerWidth = document.getElementById("slides-new").offsetWidth;
+  const containerWidth = slidesContainerNew.offsetWidth;
   const maxScroll = slidesContainerNew.scrollWidth - containerWidth;
 
   scrollAmountNew -= containerWidth;
@@ -176,5 +169,6 @@ prevBtnMostWatched.addEventListener("click", () => {
 
   slidesContainerMostWatched.style.transform = `translateX(-${scrollAmountMostWatched}px)`;
 });
+
 ////////////////////////////////
 // Fourth slider

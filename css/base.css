@@ -108,6 +108,11 @@ ul {
   letter-spacing: 2px;
   padding: 1rem 2.4rem;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.manage-profiles:hover {
+  background-color: var(--border-bottom);
 }
 
 .margin-top {

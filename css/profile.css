@@ -2,6 +2,19 @@ body {
   background-color: var(--black);
 }
 
+.header__swtich-profile {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  transition: 0.3s ease;
+}
+.header__swtich-profile:hover {
+  background-color: var(--border-bottom);
+}
+
 .bar {
   display: flex;
   justify-content: space-between;

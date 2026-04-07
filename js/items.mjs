@@ -2,52 +2,52 @@ export const TRENDING__ITEMS = [
   {
     id: 1,
     title: "En el barro banner",
-    img: "/imgs/1-en-el-barro.webp",
+    img: "/imgs/first-banner-1.webp",
   },
   {
     id: 2,
     title: "Peaky blinders el hombre inmortal banner",
-    img: "/imgs/2-peaky-blinders-the-inmortal-man.webp",
+    img: "/imgs/first-banner-2.webp",
   },
   {
     id: 3,
     title: "Máquina de guerra banner",
-    img: "/imgs/3-máquina-de-guerra.webp",
+    img: "/imgs/first-banner-3.webp",
   },
   {
     id: 4,
     title: "Bridgerton banner",
-    img: "/imgs/4-bridgerton.webp",
+    img: "/imgs/first-banner-4.webp",
   },
   {
     id: 5,
     title: "La reina del flow banner",
-    img: "/imgs/5-la-reina-del-flow.webp",
+    img: "/imgs/first-banner-5.webp",
   },
   {
     id: 6,
     title: "One Piece banner",
-    img: "/imgs/6-one-piece.webp",
+    img: "/imgs/first-banner-6.webp",
   },
   {
     id: 7,
     title: "BTS banner",
-    img: "/imgs/7-BTS.webp",
+    img: "/imgs/first-banner-7.webp",
   },
   {
     id: 8,
     title: "Esa noche banner",
-    img: "/imgs/8-esa-noche.webp",
+    img: "/imgs/first-banner-8.webp",
   },
   {
     id: 9,
     title: "jojo banner",
-    img: "/imgs/9-jojo.webp",
+    img: "/imgs/first-banner-9.webp",
   },
   {
     id: 10,
     title: "Envidiosa banner",
-    img: "/imgs/10-envidiosa.webp",
+    img: "/imgs/first-banner-10.webp",
   },
 ];
 

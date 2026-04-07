@@ -106,10 +106,6 @@ window.addEventListener("scroll", () => {
   updateBtn();
 });
 
-// bottomBtn
-// questionsList
-// header
-
 // Carrousel
 let scrollAmount = 0;
 
@@ -120,7 +116,10 @@ nextBtn.addEventListener("click", () => {
 
   scrollAmount += containerWidth;
 
-  if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+  if (scrollAmount > maxScroll) {
+    scrollAmount = maxScroll;
+    nextBtn.classList.add("hide");
+  }
 
   if (scrollAmount > 1) {
     prevBtn.classList.remove("hide");
@@ -134,10 +133,13 @@ nextBtn.addEventListener("click", () => {
 prevBtn.addEventListener("click", () => {
   const containerWidth =
     document.querySelector(".trend__container").offsetWidth;
+  const maxScroll = trendContainer.scrollWidth - containerWidth;
 
   scrollAmount -= containerWidth;
 
   if (scrollAmount < 0) scrollAmount = 0;
+
+  if (scrollAmount != maxScroll) nextBtn.classList.remove("hide");
 
   if (scrollAmount > 1) {
     prevBtn.classList.remove("hide");

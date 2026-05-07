@@ -49,7 +49,7 @@ BENEFITS__ITEMS.forEach((item) => {
 
 // Redirect to login page
 login.addEventListener("click", () => {
-  window.location.href = "login.html";
+  window.location.href = "views/login.html";
 });
 
 comenzarIndex.addEventListener("click", (e) => {

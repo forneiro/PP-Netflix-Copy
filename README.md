@@ -2,9 +2,9 @@
 Aplicación web interactiva diseñada para la gestión de perfiles de usuario de forma local. El proyecto permite crear, visualizar y eliminar tarjetas de usuario, persistiendo la información directamente en el navegador. Además, incluye una experiencia de navegación fluida mediante un carrusel personalizado.
 
 # Tecnologías Utilizadas
-**HTML5:** Estrucutra semántica para la accesibilidad. 
-**CSS:** Diseño responsivo mediante Media Queries y maquetación con Flexbox/Grid.
-**JavaScript (ES6+):**
+- **HTML5:** Estrucutra semántica para la accesibilidad. 
+- **CSS:** Diseño responsivo mediante Media Queries y maquetación con Flexbox/Grid.
+- **JavaScript (ES6+):**
   - LocalStorage: Para la persistencia de datos del lado del cliente sin base de datos externa.
   - Manipulación del DOM: Renderizado dinámico de perfiles y manejo de eventos.
 

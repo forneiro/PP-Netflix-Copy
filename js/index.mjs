@@ -78,7 +78,6 @@ const updateBtn = () => {
 
 const btnObserverFnc = new IntersectionObserver(
   (entries) => {
-    console.log(entries);
     entries.forEach((entry) => {
       if (entry.target === header) {
         headerOut = !entry.isIntersecting;

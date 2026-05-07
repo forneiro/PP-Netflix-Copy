@@ -11,5 +11,4 @@ for (let i = 1; i < 10; i++) {
 chooseImgContainer.addEventListener("click", (e) => {
   const itemTarget = e.target;
   if (!itemTarget.classList.contains("imgs-container__img")) return;
-  console.log(itemTarget);
 });

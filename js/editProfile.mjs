@@ -25,8 +25,5 @@ confirmEditBtn.addEventListener("click", () => {
 
   localStorage.setItem("users", JSON.stringify(USERS));
 
-  console.log(USERS);
-
-  console.log(userName, userImg, userCheck);
   window.location.href = "./users.html";
 });

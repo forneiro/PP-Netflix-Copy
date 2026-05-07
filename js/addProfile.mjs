@@ -40,7 +40,6 @@ if (USERS__SAVES.length >= 5) {
   addProfile.classList.add("hide");
   addProfile.classList.remove("users__add-user");
 }
-console.log(USERS__SAVES.length);
 
 // Manage Profile Site
 btnManageProfile.addEventListener("click", () => {
